@@ -1,11 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `DivSoup Blog - Web Developer blog`,
-    description: `DivSoup Blog - Web Developer blog`,
-    author: `Luis Pineda AKA DivSoup`
+    title: `DivSoup Blog`,
+    description: `Web Developer blog`,
+    author: `Luis Pineda AKA DivSoup`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/layout.js"),
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,7 +39,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-emotion`,
   ],
 }

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import usePosts from "../hooks/use-posts"
+import PostPreview from "../components/post-preview"
 
 const IndexPage = () => {
   const posts = usePosts()
@@ -16,7 +17,7 @@ const IndexPage = () => {
 
       <h2>Read my blog</h2>
       {posts.map(post => (
-        <pre>{JSON.stringify(posts, null, 2)}</pre>
+        <PostPreview key={post.slug} post={post}></PostPreview>
       ))}
     </Layout>
   )

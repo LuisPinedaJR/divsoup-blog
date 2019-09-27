@@ -13,4 +13,14 @@ I create a template string ( font-weight: \${props => props.fontWeight || 'norma
 
 9/26 @ 2AM - added a wave button, this was just a test to see if I could use useState + emoji. It works! This will be a button for either contact form or something fun inside the new mdx page I created 'contact.mdx'
 
+@9:56PM - added new hook to get mdx blog posts to show on the main index.js file. I used the below code to spit it to the home page to test to see if hook is working and I get JSON data back. Real quick method to test to see if I get the info I want.
+
+---
+
+{posts.map(post => (
+<pre>{JSON.stringify(posts, null, 2)}</pre>
+))}
+
+---
+
 <!-- END -->

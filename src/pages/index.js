@@ -11,13 +11,13 @@ const IndexPage = () => {
     <Layout>
       <SEO title="DivSoup" />
       <h1>DivSoup Blog</h1>
-      <p>THis is the home page of the blog</p>
+      <p>This is the home page of the blog</p>
       <Link to="/page-2/">Go to page 2</Link>
       <Link to="/about">About</Link>
 
       <h2>Read my blog</h2>
       {posts.map(post => (
-        <PostPreview key={post.slug} post={post}></PostPreview>
+        <PostPreview key={post.slug} post={post} />
       ))}
     </Layout>
   )
